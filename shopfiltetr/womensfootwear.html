@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<style>
+    .womensfootwear{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .wshoes{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        height: 470px;
+        width: 400px;
+    }
+    .wshoes img{
+        width: 350px;
+        height: 350px;
+        margin: 20px;
+        padding: 20px;
+       
+    }
+    .wshoes img:hover{
+        transition: 2s;
+        transform: scale(0.9);
+    }
+    h3{
+        text-align: center;
+    }
+    h4{
+        text-align: center;
+    }
+    input{
+        margin-top: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        width: 500px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+    }
+    .fbar{
+     
+        background-color: black;
+        height: 70px;
+
+    }
+</style>
+<body>
+    <button><a href="firstpage.html">Back</a></button>
+
+    <div class="container mt-5 fbar">
+        <form action="" style="display: flex;">
+
+            <input class="form-control mx-1" type="number" placeholder="Enter your Min Value" id="minval">
+    
+            <input class="form-control mx-1" type="number" placeholder="Enter your Max Value" id="maxval">
+           
+            <input type="button" class="submit" value="filter">
+    
+        </form>
+    
+    </div>
+
+
+
+    <div class="womensfootwear">
+        <div class="wshoes" data-value="999">
+            <img src="images/wf01.jpg"  alt="">
+            <h3>Brand:Skechers</h3>
+            <h4>Price:999</h4>
+        </div>
+        <div class="wshoes" data-value="799">
+            <img src="images/wf02.jpg"  alt="">
+            <h3>Brand:Skechers</h3>
+            <h4>Price:799</h4>
+        </div>
+        <div class="wshoes" data-value="1399">
+            <img src="images/wf03.jpg"  alt="">
+            <h3>Brand:Skechers</h3>
+            <h4>Price:1399</h4>
+        </div>
+        <div class="wshoes" data-value="899">
+                <img src="images/wf04.jpg"  alt="">
+                <h3>Brand:Skechers</h3>
+                <h4>Price:899</h4>
+            </div>
+            <div class="wshoes" data-value="1999">
+                <img src="images/wf05.jpg"  alt="">
+                <h3>Brand:Skechers</h3>
+                <h4>Price:1999</h4>
+            </div>
+            <div class="wshoes" data-value="1899">
+                <img src="images/wf06.jpg"  alt="">
+                <h3>Brand:Skechers</h3>
+                <h4>Price:1899</h4>
+            </div>
+        </div>
+    
+        <script>
+            subBtn=document.querySelector('.submit');
+            let datavalue=document.querySelectorAll('.wshoes');
+            datavalue.forEach(function(item){
+               subBtn.addEventListener('click',function(){
+                   let min=document.getElementById("minval").value;
+                   let max=document.getElementById("maxval").value;
+                   minPI=parseInt(min);
+                   maxPI=parseInt(max);
+                   let dataitems=item.getAttribute('data-value');
+                   if(dataitems>=minPI&&dataitems<=maxPI){
+                       item.style.display="block";
+                   }
+                   else{
+                       item.style.display="none";
+                   }
+               })
+            })
+           
+           
+           </script>
+    
+</body>
+</html>

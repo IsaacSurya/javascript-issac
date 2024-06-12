@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mens wear</title>
+</head>
+<style>
+  
+    .menswear{
+    
+      display: flex;
+      flex: wrap;
+      justify-content: center;
+
+     
+    }
+    .top{
+             margin-top: 50px;
+             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+             padding: 2%;
+             margin: 2%;
+             width: 350px;
+       
+        
+    }
+    .top img{
+                margin: 10px;
+                width: 300px;
+    }
+
+    .top img:hover{  
+          transition: 2s;
+                     transform: scale(0.9);
+    }
+    
+    .top h3{
+        text-align: center;
+
+    }
+    h1{
+        text-align: center;
+        background-color: white;
+        color: black;
+        
+    }
+    h1:hover{
+        background-color: violet;
+        transition: 2s;
+        transform: scale(0.99);
+    }
+    a{
+        text-decoration: none;
+      
+    }
+</style>
+<body>
+    <button><a href="firstpage.html">Back</a></button>
+
+    <h1>MeN's WeaR</h1>
+    <div class="menswear">
+       
+        <a href="shirts.html">
+       <div class="top">
+        <img src="images/men01.jpg" height="400px" width="350px" alt="">
+        <h3>TOP WEAR</h3>
+       </div>
+    </a>
+
+    <a href="pants.html">
+       <div class="top">
+        <img src="images/men02.jpg"  height="400px" width="350px"  alt="">
+        <h3>BOTTOM WEAR</h3>
+       </div>
+    </a>
+
+
+       <a href="footwear.html">
+       <div class="top">
+        <img src="images/men03.jpg"  height="400px" width="350px"  alt="">
+        <h3>FOOT WEAR</h3>
+       </div>
+    </a>
+    </div>
+</body>
+</html>
