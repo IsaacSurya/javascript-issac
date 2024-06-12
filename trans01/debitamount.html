@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>debitamount</title>
+</head>
+<style>
+    body{
+        background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,230,233,1) 100%);
+    }
+.amt{
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,230,233,1) 100%);
+    width: 400px;
+    text-align: center;
+    margin-left: 35%;
+    margin-top: 20%;
+}
+.amt input{
+    background-color: black;
+    color: aliceblue;
+}
+.amt button{
+    background-color: black;
+    color: aliceblue;
+}
+</style>
+<body>
+    <div class="amt">
+        <h1>DEBIT AMOUNT</h1>
+        <input type="number" placeholder="Enter your amount" id="non">
+        <button onclick="amountdebited()">debit amount</button>
+
+        <p id="tig"></p>
+    
+    </div>
+    
+
+
+    <script>
+             const fixed = 10000;
+
+             function amountdebited(){
+   
+             let user=document.getElementById('non').value;
+               
+             let userval=parseInt(user);
+
+
+                 let totalamt=fixed - userval ;
+
+               document.getElementById("tig").innerHTML=" yuor total balance =" + totalamt;
+             }
+            
+            
+
+    </script>
+</body>
+</html>

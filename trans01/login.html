@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<style>
+
+body{
+    background:linear-gradient(to bottom right, #33ccff 0%, #cc0000 100%);
+    height: 900px;
+    background-size: cover;
+       background-repeat: no-repeat;
+
+}
+
+.main{
+     display: flex;
+     text-align: center;
+     align-items: center;
+     justify-content: center;
+}
+.index{
+     
+       background:linear-gradient(to bottom right, #33ccff 0%, #cc0000 100%);
+      
+       color: aliceblue;
+       width: 400px;
+       height: 400px;
+       text-align: center;
+       margin-top: 100px;
+       padding-top: 80px;
+      
+
+}
+.index button:hover{
+ background-color: aqua;
+}
+
+
+
+</style>
+<body>
+    <div class="container main">
+
+    <div class="index">
+    <h1> User login</h1>
+    <input type="text" placeholder="Acoount holder Name" id="acount"><br><br>
+    <input type="password" placeholder="Enter Your four digit pin" id="psswrd"><br><br>
+    <button onclick=" result()">Login</button>
+
+</div>  
+</div>
+
+
+<script>
+
+function result(){
+      
+    let Actnum=document.getElementById('acount').value;
+   
+
+    let pswrd=document.getElementById('psswrd').value;
+
+
+
+    
+if(Actnum==123456 && pswrd==9999){
+
+alert("log in successful");
+location.href="details.html";
+}
+
+
+else if(Actnum!==123456 && pswrd!==9999){
+
+    alert("please enter valid details")
+}
+else{
+alert("log in successful");
+}
+
+  
+}
+
+
+
+</script>
+
+</body>
+</html>

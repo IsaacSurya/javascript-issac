@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creditamount</title>
+</head>
+<STYle>
+    body{
+        background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,70,1) 100%);
+
+    }
+    .amount{
+        background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,70,1) 100%);
+
+        
+        width: 400px;
+        text-align: center;
+        margin-left: 35%;
+        margin-top: 20%;
+    }
+    .amount button{
+        background-color: black;
+        color: aliceblue;
+    }
+    .amount input{
+        background-color: black;
+        color: aliceblue;
+    }
+
+</STYle>
+<body>
+    <div class="amount">
+        <h1>CREDIT AMOUNT</h1>
+        <input type="number" placeholder="Enter your amount" id="lol">
+        <button onclick="amountcredited()">credit amount</button>
+        <p id="dig"></p>
+    
+
+</div>
+<script>
+    const fixed = 10000;
+
+    function amountcredited(){
+
+    let user=document.getElementById('lol').value;
+      
+    let userval=parseInt(user);
+
+
+        let totalamt=fixed + userval ;
+
+      document.getElementById("dig").innerHTML=" yuor total balance =" + totalamt;
+    }
+   
+   
+
+</script>
+
+    
+</body>
+</html>

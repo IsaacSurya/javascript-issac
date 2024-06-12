@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accountdetails</title>
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+    .menu{
+        background-color: aqua;
+        width: 400px;
+        height: 500px;
+      text-align: center;
+     margin-left:35%;
+     margin-top: 17%;
+    }
+  .menu button{
+    background-color: black;
+    color: aliceblue;
+  }
+  .menu button:hover{
+    background-color: red;
+  }
+
+.hello{
+
+      
+         display: flex;
+         justify-content: center;
+         padding-top: 50px;
+        
+}
+
+  .main05 button{
+    background-color: blueviolet;
+    
+  
+  }
+
+</style>
+<body>
+  <div class="container main05" id="imcredit" style="display: none;">
+    <div class="hello">
+     
+    <a href="creditamount.html"><button onclick="subbtn05()">Credit</button></a> 
+    <a href="debitamount.html"><button onclick="subbtn05()">debit</button></a> 
+     
+
+    </div>
+</div>
+
+
+    <div class="menu">
+        <h1>ACCOUNT DETAILS</h1>
+        <h3>Account number:Yedla Issaku</h3>
+        <h3>Account holder name:567890</h3>
+        <h3>IFSE Code:3345</h3>
+        <h3>Amount:10000</h3>
+        <h3>Email:yedlaissaku@gmail.com</h3>
+        <h3>Branch code:7788</h3>
+        <h3>Date of birth:04/12/2002</h3><br><br>
+        <button onclick="Continuewithtrasaction(event)">Continue with Transaction</button>
+
+    </div>
+
+    <script>
+      function Continuewithtrasaction(event){
+        event.preventDefault();
+       
+        document.getElementById('imcredit').style.display='block';
+
+
+      
+       
+    }
+  
+       
+  </script>
+      
+</body>
+</html>
